@@ -1,13 +1,15 @@
+.top-bar {
+  opacity: 87;
+}
 .top-bar, .top-bar ul {
   background-color: $nav-background;
-  opacity: 87;
 }
 .top-bar {
   .menu-text {
     color: $nav-text-color;
   }
   a {
-    color: $nav-text-color;
+    color: white;
   }
 
   .menu > .menu-text > a {

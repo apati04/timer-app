@@ -15,7 +15,7 @@ export default (props) => {
 
       <div className="top-bar-right">
         <ul className="menu">
-          <li className="menu-text-">
+          <li className="menu-text">
             Created by <a href="apati04.github.io" target="_blank">Andrew Patipaksiri</a>
           </li>
         </ul>
