@@ -26278,7 +26278,7 @@
 
 
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #000000; }\n\n.top-bar .menu-text {\n  color: #FFFFFF; }\n\n.top-bar a {\n  color: blue; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #000000;\n  border: 6px solid #FFFFFF;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: #FFFFFF;\n  font-size: 2.25rem;\n  font-weight: 300; }\n\nbody {\n  background-color: #000000;\n  opacity: 87; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #000000; }\n\n.top-bar .menu-text {\n  color: #FFFFFF; }\n\n.top-bar a {\n  color: cyan; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #000000;\n  border: 6px solid #FFFFFF;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: #FFFFFF;\n  font-size: 2.25rem;\n  font-weight: 400; }\n\nbody {\n  background-color: #000000; }\n", ""]);
 
 	// exports
 

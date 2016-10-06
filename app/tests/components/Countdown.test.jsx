@@ -37,7 +37,7 @@ describe('Countdown', ()=>{
       setTimeout(()=>{
         expect(countdown.state.count).toBe(0);
         done();
-      }, 3001);
+      }, 2001);
     })
   })
 })

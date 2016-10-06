@@ -1,13 +1,14 @@
 
 .top-bar, .top-bar ul {
-  background-color: $primary-color;
+  background-color: $nav-background;
+
 }
 .top-bar {
   .menu-text {
     color: $nav-text-color;
   }
   a {
-    color: blue;
+    color: cyan;
   }
 
   .menu > .menu-text > a {
