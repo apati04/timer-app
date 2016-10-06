@@ -25774,6 +25774,11 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'page-title' },
+	          'Countdown App'
+	        ),
 	        _react2.default.createElement(_Clock2.default, { totalSeconds: count }),
 	        renderControlArea()
 	      );
@@ -26401,7 +26406,7 @@
 
 
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #000000; }\n\n.top-bar .menu-text {\n  color: #FBE9E7; }\n\n.top-bar a {\n  color: cyan; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #000000;\n  border: 6px solid cyan;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: cyan;\n  font-size: 2.25rem;\n  font-weight: 400; }\n\nbody {\n  background-color: #000000; }\n\n.controls {\n  display: flex;\n  justify-content: center; }\n  .controls .button {\n    padding: .75rem 3rem; }\n  .controls .button:first-child {\n    margin-right: 1.5rem; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #000000; }\n\n.top-bar .menu-text {\n  color: #FBE9E7; }\n\n.top-bar a {\n  color: cyan; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #000000;\n  border: 6px solid cyan;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: cyan;\n  font-size: 2.25rem;\n  font-weight: 400; }\n\nbody {\n  background-color: #000000; }\n\n.controls {\n  display: flex;\n  justify-content: center; }\n  .controls .button {\n    padding: .75rem 3rem; }\n  .controls .button:first-child {\n    margin-right: 1.5rem; }\n\n.page-title {\n  margin: 2rem 0;\n  text-align: center;\n  color: white; }\n", ""]);
 
 	// exports
 
