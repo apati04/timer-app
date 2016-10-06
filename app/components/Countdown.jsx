@@ -14,6 +14,7 @@ export default class Countdown extends Component {
     this.startTimer = this.startTimer.bind(this);
     this.handleStatusChange =  this.handleStatusChange.bind(this);
   }
+
   componentDidUpdate(prevProps, prevState){
     if(this.state.countStatus !== prevState.countStatus){
       switch(this.state.countStatus){
@@ -29,12 +30,19 @@ export default class Countdown extends Component {
       }
     }
   }
+  componentWillUnmount(){
+    clearInterval(this.timer);
+    this.timer = undefined;
+  }
   startTimer(){
     this.timer = setInterval( ()=>{
       let newCount = this.state.count - 1;
       this.setState({
         count: newCount >=0 ? newCount : 0
       });
+      if(!newCount){
+        this.setState({countStatus: 'stopped'})
+      }
     }, 1000);
   }
   setCountdown(seconds){

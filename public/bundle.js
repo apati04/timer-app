@@ -25722,6 +25722,12 @@
 	      }
 	    }
 	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.timer);
+	      this.timer = undefined;
+	    }
+	  }, {
 	    key: 'startTimer',
 	    value: function startTimer() {
 	      var _this2 = this;
@@ -25731,6 +25737,9 @@
 	        _this2.setState({
 	          count: newCount >= 0 ? newCount : 0
 	        });
+	        if (!newCount) {
+	          _this2.setState({ countStatus: 'stopped' });
+	        }
 	      }, 1000);
 	    }
 	  }, {
@@ -26392,7 +26401,7 @@
 
 
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #000000; }\n\n.top-bar .menu-text {\n  color: #FBE9E7; }\n\n.top-bar a {\n  color: cyan; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #000000;\n  border: 6px solid #FBE9E7;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: #FBE9E7;\n  font-size: 2.25rem;\n  font-weight: 400; }\n\nbody {\n  background-color: #000000; }\n\n.controls {\n  display: flex;\n  justify-content: center; }\n  .controls .button {\n    padding: .75rem 3rem; }\n  .controls .button:first-child {\n    margin-right: 1.5rem; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #000000; }\n\n.top-bar .menu-text {\n  color: #FBE9E7; }\n\n.top-bar a {\n  color: cyan; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #000000;\n  border: 6px solid cyan;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: cyan;\n  font-size: 2.25rem;\n  font-weight: 400; }\n\nbody {\n  background-color: #000000; }\n\n.controls {\n  display: flex;\n  justify-content: center; }\n  .controls .button {\n    padding: .75rem 3rem; }\n  .controls .button:first-child {\n    margin-right: 1.5rem; }\n", ""]);
 
 	// exports
 
