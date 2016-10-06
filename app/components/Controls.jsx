@@ -2,7 +2,7 @@ import React, { Component, PropTypes} from 'react';
 
 export default class Controls extends Component {
 
-  static propTypes= {
+  static propTypes = {
     countStatus: React.PropTypes.string.isRequired,
     onStatusChange: React.PropTypes.func.isRequired
   }
@@ -11,7 +11,7 @@ export default class Controls extends Component {
       this.props.onStatusChange(newStatus);
     }
   }
-  
+
   render(){
     let { countStatus } = this.props;
 
