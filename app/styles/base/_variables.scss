@@ -1,6 +1,18 @@
 // Colors
-$blue: #2196F3;
 
+$primary-color-dark:   #1976D2;
+$primary-color:        #2196F3;
+$primary-color-light:  #BBDEFB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #448AFF;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
 // Navigation Colors
-$nav-background: $blue;
-$nav-text-color: white;
+$nav-background: $primary-color-dark;
+$nav-text-color: $primary-color-text;
+
+// Clock vars
+$clock-text-color: $primary-color-text;
+$clock-bg-color: $primary-color;
+$clock-border-color: $primary-color-text;
