@@ -8,7 +8,7 @@ export default class CountdownForm extends Component {
   onSubmit(e){
     e.preventDefault();
     let strSeconds = this.refs.seconds.value;
-    if(strSeconds.match(/[0-9]*$/)){
+    if(strSeconds.match(/[0-9]+$/)){
       this.refs.seconds.value = "";
       // 10 is base number
       this.props.onSetCountdown(parseInt(strSeconds, 10));

@@ -25691,17 +25691,43 @@
 	    var _this = _possibleConstructorReturn(this, (Countdown.__proto__ || Object.getPrototypeOf(Countdown)).call(this, props));
 
 	    _this.state = {
-	      count: 0
+	      count: 0,
+	      countStatus: 'stopped'
 	    };
 	    _this.setCountdown = _this.setCountdown.bind(_this);
+	    _this.startTimer = _this.startTimer.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(Countdown, [{
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate(prevProps, prevState) {
+	      if (this.state.countStatus !== prevState.countStatus) {
+	        switch (this.state.countStatus) {
+	          case 'started':
+	            this.startTimer();
+	            break;
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'startTimer',
+	    value: function startTimer() {
+	      var _this2 = this;
+
+	      this.timer = setInterval(function () {
+	        var newCount = _this2.state.count - 1;
+	        _this2.setState({
+	          count: newCount >= 0 ? newCount : 0
+	        });
+	      }, 1000);
+	    }
+	  }, {
 	    key: 'setCountdown',
 	    value: function setCountdown(seconds) {
 	      this.setState({
-	        count: seconds
+	        count: seconds,
+	        countStatus: 'started'
 	      });
 	    }
 	  }, {
@@ -25838,7 +25864,7 @@
 	    value: function onSubmit(e) {
 	      e.preventDefault();
 	      var strSeconds = this.refs.seconds.value;
-	      if (strSeconds.match(/[0-9]*$/)) {
+	      if (strSeconds.match(/[0-9]+$/)) {
 	        this.refs.seconds.value = "";
 	        // 10 is base number
 	        this.props.onSetCountdown(parseInt(strSeconds, 10));
@@ -26252,7 +26278,7 @@
 
 
 	// module
-	exports.push([module.id, ".top-bar {\n  opacity: 87; }\n\n.top-bar, .top-bar ul {\n  background-color: #1976D2; }\n\n.top-bar .menu-text {\n  color: #FFFFFF; }\n\n.top-bar a {\n  color: white; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #2196F3;\n  border: 8px solid #FFFFFF;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: #FFFFFF;\n  font-size: 2.25rem;\n  font-weight: 300; }\n\nbody {\n  background-color: #2196F3; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #000000; }\n\n.top-bar .menu-text {\n  color: #FFFFFF; }\n\n.top-bar a {\n  color: blue; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n\n.clock {\n  align-items: center;\n  background-color: #000000;\n  border: 6px solid #FFFFFF;\n  border-radius: 50%;\n  display: flex;\n  height: 14rem;\n  justify-content: center;\n  margin: 4rem auto;\n  width: 14rem; }\n\n.clock-text {\n  color: #FFFFFF;\n  font-size: 2.25rem;\n  font-weight: 300; }\n\nbody {\n  background-color: #000000;\n  opacity: 87; }\n", ""]);
 
 	// exports
 
